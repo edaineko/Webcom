@@ -1,0 +1,49 @@
+
+.icon-menu{
+    position:absolute;
+    top:26px;
+    right:20px;
+}
+.icon-close{
+    position:absolute;
+    top:26px;
+    right:20px;
+}
+.mob-menu {
+    position: fixed;
+    left:0;
+    top:0;
+    font-weight:bold;
+    width: 60%;
+    height: 100vh;
+    background-color: rgba(40, 54, 61,0.8);
+    font-size: 0.9em;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    line-height: 1.2;
+    z-index:100;
+}
+.mob-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    top: 30%;
+}
+.mob-menu li {
+    display: block;
+    padding:15px;
+}
+.mob-menu li:hover{
+    display: block;
+    background: rgba(30, 41, 47,0.5);
+    padding:15px 0;
+    color: #6b848c;
+    border-bottom: 4px solid rgba(255, 130, 7,0.5);
+}
+
+.mob-menu a {
+    height: 20px;
+    text-decoration:none;
+    color: rgb(255, 255, 255);
+}
