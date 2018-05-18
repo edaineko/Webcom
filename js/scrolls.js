@@ -26,7 +26,7 @@ $(document).ready(function(){
 
     function scrollToElement(id) {
         $('html, body').animate({
-            scrollTop: $(id).offset().top - 80
+            scrollTop: $(id).offset().top - 120
         }, 1000);
     }
 

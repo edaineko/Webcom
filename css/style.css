@@ -19,7 +19,6 @@ body{
     height: 100%;
 }
 header{
-    display: flex;
     width: 100%;
     background-color: rgb(40, 54, 61);
 }
@@ -28,42 +27,43 @@ header{
 }
 .container{
     position: relative;
-    max-width:1420px;
+    width: 1400px;
+    max-width: 90%;
 }
 .wrapper,
 .wrapper-footer {
     max-width: 97%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .logo{
-    display: inline-flex;
-    float: left;
-    margin-top: 40px;
+    order: 1;
+    flex-grow: 1;
+    margin-top: 30px;
 }
 .burger-menu{
     display: none;
 }
 nav{
-    display: flex;
-    justify-content: flex-start;
-    float: left;
+    order: 1;
+    flex-grow: 1;
 }
 .nav-menu{
     font-size: 0.9em;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     line-height: 1.2;
-    margin: 0 0 0 55px;
     padding: 0;
 }
-.nav-menu ul{
-    display: inline-flex;
-    width: 940px;
+ul.nav-menu {
+    display: flex;
     padding: 0;
+    order: 1;
+    flex-grow: 1;
 }
 .nav-menu li{
-    display: inline-flex;
+    display: flex;
     padding:0;
-    margin-left: 16px;
 }
 .nav-menu li a:hover{
     background: rgba(30, 41, 47, 0.5);
@@ -86,18 +86,21 @@ nav{
 .nav-menu a:visited{
     color: rgb(255, 255, 255);
 }
-
+ul.number-nav{
+    order: 1;
+    flex-grow: 1;
+    padding: 0;
+}
 .number-nav li{
+    display: flex;
     font-size: 1.438em;
-    padding-top: 32px;
+    padding-top: 18px;
     color: rgb(255, 130, 7);
     font-weight: bold;
     text-transform: uppercase;
 }
 .phone-number-header,
 .phone-number-header a:visited{
-    display: inline-block;
-    float: right;
     padding: 0;
     margin: 0;
     color: rgb(255, 130, 7);
@@ -120,7 +123,8 @@ button.nav-button {
     margin-top: 18px;
 }
 .scroll-nav-button{
-    display: inline-flex;
+    display: flex;
+    order: 1;
     border-radius: 10px;
     border: 2px solid rgb(255, 130, 7);
     width: 196px;
@@ -186,18 +190,27 @@ h1{
     padding: 37% 0;
 }
 .main-title p{
-    padding-top: 6px;
+    padding-top: 40px;
     font-size:1.5em;
     overflow: hidden;
     margin-bottom: 154px;
 }
 .separator-title{
-    height: 57px;
+    display: flex;
+    max-width: 70%;
+}
+.line-separator-title{
+    background: url("../images/separator.png") no-repeat 50%;
+    width: 400px;
+    height: 30px;
+    max-width: 50%;
 }
 .rectangle{
-    display: inline-flex;
-    vertical-align: -6px;
+    background: url("../images/sep-rectangle.png") no-repeat 50%;
+    width: 40px;
+    height: 30px;
 }
+
 .main-slider-button{
     z-index: 2;
     border-radius: 10px;
@@ -221,11 +234,12 @@ a.btn-slider :visited,
     color: rgb(255, 255, 255);
 }
 .slick-dots li{
-    display: inline-flex;
+}
+.box-foto{
+    display: flex;
+    flex-wrap: wrap;
 }
 .box{
-    display: inline-flex;
-    flex-direction: column;
     background-color: rgb(40, 54, 61);
     width: 460px;
     height: 320px;
@@ -235,24 +249,6 @@ a.btn-slider :visited,
     background: url("../images/bg-section-2.png") no-repeat 50%;
     background-size: cover;
     height: 977px;
-}
-
-.scrollbar{
-    position: absolute;
-    top:15%;
-    right:1%;
-    padding: 0;
-}
-.scrollbar li{
-    background-color: rgba(40, 54, 61, .4);
-    border-radius: 12px;
-    height: 18px;
-    width: 18px;
-    display: block;
-    margin: 7px;
-}
-#portfolio .active-scrollbar{
-    background-color: rgb(255, 130, 7);
 }
 .title{
     padding: 50px 0 0;
@@ -286,8 +282,10 @@ a.btn-slider :visited,
 .box{
     position: relative;
     width: 31%;
-    margin-bottom: 10px;
-    margin-left: 15px;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
 }
 .active-box{
     position: absolute;
@@ -319,9 +317,12 @@ a.btn-slider :visited,
     color: #7b7b7b;
     font-size: 1em;
 }
+.advantage-block{
+    display: flex;
+    flex-wrap: wrap;
+}
 .adv-bl{
-    display: inline-flex;
-    flex-direction: column;
+    flex-grow: 1;
     width: 20%;
     margin: 40px 30px;
     overflow: hidden;
@@ -340,6 +341,7 @@ a.btn-slider :visited,
     overflow: hidden;
 }
 .contacts-bl-2{
+    display: flex;
     margin-top: 40px;
     max-width: 940px;
 }
@@ -349,7 +351,7 @@ a.btn-slider :visited,
 .go-to-top{
     z-index: 2;
     position: fixed;
-    display: inline-block;
+    display: flex;
     background: url("../images/arr-scrollbar.png") no-repeat 50%;
     border: 3px solid rgb(255, 130, 7);
     border-radius: 10px;
@@ -360,7 +362,6 @@ a.btn-slider :visited,
     cursor: pointer;
 }
 .address{
-    display: inline-flex;
     max-width: 47%;
     float: left;
 }
@@ -396,8 +397,6 @@ a.btn-slider :visited,
     padding: 0;
 }
 .form-review{
-    display: inline-flex;
-    flex-direction: column;
     text-align: left;
     max-width: 45%;
     position: relative;
@@ -518,7 +517,6 @@ textarea{
 .captcha{
     margin: 30px 0;
     text-align: left;
-    display: inline-block;
 }
 .captcha span{
     font-size: 1.5em;
@@ -528,13 +526,10 @@ textarea{
     text-transform: uppercase;
 }
 .captcha img{
-    display: inline-block;
     margin:35px 0;
     text-align: left;
 }
 .button-form{
-    display: inline-block;
-    float: right;
     position: absolute;
     bottom: 80px;
     right: -125px;
@@ -557,25 +552,20 @@ textarea{
     padding: 41px 0;
 }
 .footer-bl{
-    flex-direction: column;
-    order: 1;
     flex-grow: 1;
 }
 .separator-footer{
     padding: 18px;
 }
 .footer-bl span,
-.footer-bl img{
+.footer-bl img {
     display: block;
 }
-.footer-bl-rg img{
-    display: inline-block;
-}
 .footer-bl ul{
+    display: flex;
     padding: 0;
 }
 .footer-bl li{
-    display: inline-flex;
     padding: 0 15px;
 }
 .footer-bl h3{
@@ -596,8 +586,16 @@ textarea{
     text-align: left;
     margin: 0;
 }
+.footer-bl-lf span{
+    padding-top: 20px;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+}
 .footer-bl-rg{
     text-align: right;
+    margin: 0;
 }
 .copyright{
     font-size: 0.875em;
